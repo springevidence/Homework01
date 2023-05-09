@@ -53,7 +53,7 @@ const setFilter = (filter: FilterType) => {
 }
 export const deleteAffair = (affairs: Array<AffairType>, id: number): Array<AffairType> => { // need to fix any
     const  deletedAffair = affairs.filter((a) => a._id !== id);
-    console.log(affairs, id);
+    // console.log(affairs, id);
     return deletedAffair // need to fix +
 
 }

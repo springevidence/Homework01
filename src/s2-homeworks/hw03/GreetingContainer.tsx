@@ -11,12 +11,7 @@ export const pureAddUser = (name: string, setError: (error: string) => void, set
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
     if (name.trim() === '') {
         setError("Ошибка! Введите имя!")
-        setName('')
-        // console.log(name.length)
-    // } else if (name === '    ') {
-    //     setError("Ошибка! Введите имя!")
     } else {
-
         addUserCallback(name);
         setName('')
     }
@@ -33,9 +28,6 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => v
         addUser()
     }
 }
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
-// более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     users,
     addUserCallback,
@@ -61,7 +53,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix +
-    const lastUserName = name // need to fix +
+
+    let lastUserName = ''
+    if (users.length > 0) {
+        lastUserName = users[users.length-1].name
+    }
+
+    // need to fix +
 
     return (
         <Greeting
