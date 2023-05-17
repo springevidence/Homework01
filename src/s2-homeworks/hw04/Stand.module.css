@@ -21,3 +21,10 @@
     flex-direction: column;
     gap: 36px;
 }
+
+input {
+    width: 372px;
+    height: 36px;
+}
+
+
