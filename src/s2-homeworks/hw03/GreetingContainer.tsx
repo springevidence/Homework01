@@ -31,8 +31,7 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => v
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     users,
     addUserCallback,
-}) => {
-    // деструктуризация пропсов
+}) => { // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any +
     const [error, setError] = useState<string>('') // need to fix any +
 
@@ -58,7 +57,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     if (users.length > 0) {
         lastUserName = users[users.length-1].name
     }
-
     // need to fix +
 
     return (

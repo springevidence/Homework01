@@ -23,6 +23,8 @@
     width: 372px;
     height: 36px;
     margin-right: 12px;
+    padding-left: 15px;
+
 }
 .notError {
     border: 1px solid #D1D1D1;
@@ -30,6 +32,8 @@
     width: 372px;
     height: 36px;
     margin-right: 12px;
+    padding-left: 15px;
+
 }
 
 .input {
