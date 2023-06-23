@@ -31,17 +31,15 @@ function Clock() {
         setShow(false)
     }
     // const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const formatter3 = new Intl.DateTimeFormat("en-US", {month: "long"})
-    const stringTime = date.toLocaleTimeString() || <br/>
-    const stringDate = formatter3.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
-
-    // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    // const stringDay = 'date->day' || <br/> // пишут студенты
-    // const stringMonth = 'date->month' || <br/> // пишут студенты
     const formatter1 = new Intl.DateTimeFormat("ru")
     const formatter2 = new Intl.DateTimeFormat("en-US", {weekday: "long"})
+    const formatter3 = new Intl.DateTimeFormat("en-US", {month: "long"})
+
+
+    const stringTime = date.toTimeString().slice(0, 8) || <br/>
+    const stringDate = formatter1.format(date)  || <br/>
     const stringDay = formatter2.format(date) || <br/>
-    const stringMonth = formatter1.format(date) || <br/>
+    const stringMonth = formatter3.format(date) || <br/>
 
     return (
         <div className={s.clock}>
