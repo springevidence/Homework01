@@ -42,7 +42,7 @@
 
 .default:hover {
     background: #0080FF;
-    width: 167px;
+    /*width: 167px;*/
     height: 30px;
 }
 
