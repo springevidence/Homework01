@@ -5,10 +5,10 @@
 
 .header {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     height: 60px;
     background: #FFFFFF;
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
