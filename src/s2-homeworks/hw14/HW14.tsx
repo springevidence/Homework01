@@ -6,7 +6,7 @@ import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedI
 import {useSearchParams} from 'react-router-dom'
 
 /*
-* 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
+* 1 - дописать функцию в SuperDebouncedInput
 * 2 - дописать функцию sendQuery в HW14
 * 3 - дописать функцию onChangeText в HW14
 * 4 - сделать стили в соответствии с дизайном
@@ -35,9 +35,11 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTechs(res.data.techs)
+                }
+                setLoading(false)//
                 // сохранить пришедшие данные
-
                 //
             })
     }
@@ -47,7 +49,7 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
+        setSearchParams(value)
 
         //
     }
